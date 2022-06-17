@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request 
 from flask_sqlalchemy import SQLAlchemy 
+from sqlalchemy import *
 from send_mail import send_mail
+import os
+import re
 
 
 # Initialization 
@@ -9,14 +12,18 @@ app = Flask(__name__)
 # We will have 2 databases: development and production. 
 ENV = 'prod' 
 
+
+
 if ENV == 'dev': 
     app.debug = True 
     # developer database for local deployment 
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:katze99@localhost/cafehouse' 
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://postgres:katze99@localhost/cafehouse' 
 else: 
     app.debug = False 
     # production database for global deployment 
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://nbtovjoyfcxvnl:f11b0f7b8150432c164ff8209fd53f5a670aeee303972b68523f7f9690db1449@ec2-54-158-247-210.compute-1.amazonaws.com:5432/de8ifsfpekpkqb' 
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://gpayohujzputac:daba9fabb17ad3fe2bdc1eab3f465a2045e401a80bc106aaa5e85fbe287ad818@ec2-52-200-215-149.compute-1.amazonaws.com:5432/deg5150ef4hao9' 
+   
+
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False 
 
