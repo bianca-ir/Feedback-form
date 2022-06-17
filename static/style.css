@@ -41,7 +41,10 @@ img {
 .logo {
 	width: 300px;
 	display: block;
-	margin: auto;
+	margin-top: 5px;
+	margin-right: 20px; 
+	margin-left: 155px; 
+	
 }
 
 .form-group {
