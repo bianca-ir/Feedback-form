@@ -22,7 +22,7 @@ else:
     app.debug = False 
     # production database for global deployment 
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://gpayohujzputac:daba9fabb17ad3fe2bdc1eab3f465a2045e401a80bc106aaa5e85fbe287ad818@ec2-52-200-215-149.compute-1.amazonaws.com:5432/deg5150ef4hao9' 
-   
+    DATABASE_URL = os.environ.get("DATABASE_URL").replace("postgres", "postgresql")
 
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False 
