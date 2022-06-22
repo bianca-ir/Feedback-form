@@ -31,6 +31,6 @@ Project is created with:
 * SQLAlchemy version: 1.4.37 
 
 ## Demo 
-Deployed version: https://cafehousefeedback.herokuapp.com/submit
+Deployed version: https://cafehousefeedback.herokuapp.com
 
 
