@@ -17,7 +17,7 @@ ENV = 'prod'
 if ENV == 'dev': 
     app.debug = True 
     # developer database for local deployment 
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://postgres:katze99@localhost/cafehouse' 
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://postgres:pass@localhost/cafehouse' 
 else: 
     app.debug = False 
     # production database for global deployment 
